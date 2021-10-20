@@ -1,0 +1,33 @@
+﻿
+.title {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    z-index: 198;
+    animation: zoomIn 5s forwards;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    .svg{
+        width: 100%;
+    }
+}
+
+.countdown {
+    .counter {
+/*        animation: zoomIn .3s ease;*/
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

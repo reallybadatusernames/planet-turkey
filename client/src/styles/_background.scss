@@ -1,0 +1,222 @@
+﻿.background {
+    position: relative;
+    height: 100%;
+    background: -moz-linear-gradient(50% 108.71% 90deg,rgba(87, 107, 138, 1) 23.24%,rgba(134, 46, 126, 1) 61.39%,rgba(15, 3, 41, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(87, 107, 138, 1) 23.24%, rgba(134, 46, 126, 1) 61.39%, rgba(15, 3, 41, 1) 100%);
+    background: -webkit-gradient(linear,50% 108.71%,50% -1.57%,color-stop(0.2324,rgba(87, 107, 138, 1) ),color-stop(0.6139,rgba(134, 46, 126, 1) ),color-stop(1,rgba(15, 3, 41, 1) ));
+    background: -o-linear-gradient(90deg, rgba(87, 107, 138, 1) 23.24%, rgba(134, 46, 126, 1) 61.39%, rgba(15, 3, 41, 1) 100%);
+    background: -ms-linear-gradient(90deg, rgba(87, 107, 138, 1) 23.24%, rgba(134, 46, 126, 1) 61.39%, rgba(15, 3, 41, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#576B8A', endColorstr='#0F0329' ,GradientType=0)";
+    background: linear-gradient(0deg, rgba(87, 107, 138, 1) 23.24%, rgba(134, 46, 126, 1) 61.39%, rgba(15, 3, 41, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0F0329',endColorstr='#576B8A', GradientType=0);
+
+    &.active {
+        svg#wave_one {
+            animation: waveOne 8s linear infinite;
+        }
+
+        svg#wage_two {
+            animation: waveTwo 8s linear infinite;
+        }
+
+        .meteor-container {
+            &.meteor-container-left {
+                svg {
+                    transform: translateX(-20%);
+                    animation: leftToRight 2s 5s linear;
+                }
+            }
+
+            &.meteor-container-right {
+                svg {
+                    animation: rightToLeft 4s 10s linear forwards;
+                }
+            }
+        }
+    }
+
+    svg#wave_one {
+        width: 110%;
+        position: absolute;
+        left: -5%;
+        right: 0;
+        top: -15%;
+        margin: auto;
+        z-index: 1;
+    }
+    #rocket{
+        width: 150px;
+
+    }
+    svg#wave_two {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+        z-index: 2;
+    }
+
+    svg#planet_one {
+        width: 25%;
+        position: absolute;
+        right: 5%;
+        top: -15%;
+        z-index: 3;
+    }
+
+    svg#planet_two {
+        width: 10%;
+        position: absolute;
+        left: 5%;
+        top: 8%;
+        z-index: 3;
+    }
+
+    svg#terrain {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 5;
+    }
+
+    .meteor-container {
+        &.meteor-container-left {
+            height: 75px;
+            position: absolute;
+            width: 200%;
+            left: -35%;
+            margin: auto;
+            transform: rotate( 30deg);
+            top: 75%;
+            z-index: 4;
+
+            svg {
+                transform: translateX(-20%);
+            }
+        }
+
+        &.meteor-container-right {
+            height: 50px;
+            position: absolute;
+            width: 200%;
+            right: -35%;
+            margin: auto;
+            transform: rotate( -20deg);
+            top: 55%;
+            z-index: 4;
+        }
+    }
+
+    svg#meteor1 {
+        position: absolute;
+        width: 10%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+
+        path {
+            &.flame-one {
+                animation: flicker 3s ease-in-out infinite;
+            }
+
+            &.flame-two {
+                animation: flicker2 3s ease-in-out infinite;
+            }
+        }
+    }
+
+    svg#meteor2 {
+        position: absolute;
+        width: 10%;
+        z-index: 4;
+        transform: rotate( 180deg);
+        height: 100%;
+    }
+}
+
+/*Background animations*/
+
+@keyframes flash{
+    from{
+        opacity: 0;
+    }
+    20%{
+        opacity:1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes waveOne{
+    from {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(.9);
+    }
+    to {
+        transform: translateY(1);
+    }
+}
+
+@keyframes waveTwo {
+    from {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.1);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes flicker{
+    from {
+        opacity: 1
+    }
+   60%{
+        opacity: 0
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes flicker2 {
+    from {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes leftToRight{
+    from{
+        transform: translateX(-20%);
+    }
+    to{
+        transform: translateX(400%);
+    }
+}
+
+@keyframes rightToLeft{
+    from{
+        right: 0;
+    }
+    to{
+        right: 100%;
+    }
+}

@@ -1,0 +1,248 @@
+﻿
+.craters {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 196;
+
+    .fadeOut {
+        animation: fadeOut .4s forwards;
+    }
+
+    .img {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .crater {
+        position: absolute;
+
+        .back {
+            position: absolute;
+        }
+
+        .front {
+        }
+
+        &.moving {
+            div {
+                background-color: green;
+            }
+        }
+
+        &.hiding {
+            div {
+                background-color: blue;
+            }
+        }
+
+        div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 0;
+            right: 0;
+            top: -100%;
+            background-color: red;
+        }
+    }
+
+    #craterOne {
+        width: 25%;
+        top: 0%;
+
+
+        &.moving {
+            div {
+                background-color: green;
+            }
+        }
+
+        &.hiding {
+            .turkey {
+                top: 30%;
+            }
+        }
+
+        .back {
+            position: absolute;
+            width: 102%;
+            left: -1%;
+            z-index: 200;
+        }
+
+        .front {
+            position: relative;
+            z-index: 202;
+        }
+
+        .turkey {
+            position: absolute;
+            width: 42%;
+            left: 27%;
+            top: 30%;
+            z-index: 201;
+            margin: auto;
+        }
+
+        .alien {
+            position: absolute;
+            width: 42%;
+            top: 1%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 201;
+        }
+    }
+
+    #craterTwo {
+        width: 29%;
+        top: 10%;
+        left: 22%;
+
+        .back {
+            position: absolute;
+        }
+
+        .front {
+            position: relative;
+            z-index: 202;
+        }
+
+        .turkey {
+            position: absolute;
+            width: 41%;
+            left: -2%;
+            right: 0;
+            top: 30%;
+            z-index: 201;
+            margin: auto;
+        }
+
+        .alien {
+            position: absolute;
+            width: 42%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 1%;
+        }
+    }
+
+    #craterThree {
+        width: 29%;
+        top: 33%;
+        left: 38%;
+        z-index: 204;
+
+        .back {
+            position: absolute;
+        }
+
+        .front {
+            position: relative;
+            z-index: 204;
+        }
+
+        .turkey {
+            position: absolute;
+            left: -2%;
+            right: 0;
+            width: 45%;
+            margin: auto;
+            top: 15%;
+            z-index:203;
+        }
+
+        .alien {
+            position: absolute;
+            width: 42%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 1%;
+        }
+    }
+
+    #craterFour {
+        width: 29%;
+        left: 50%;
+        top: -7%;
+
+
+        .back {
+            position: absolute;
+        }
+
+        .front {
+            position: relative;
+            z-index: 202;
+        }
+
+        .turkey {
+            position: absolute;
+            width: 41%;
+            left: 10%;
+            right: 0;
+            top: 30%;
+            z-index: 201;
+            margin: auto;
+        }
+
+        .alien {
+            position: absolute;
+            width: 42%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 8%;
+        }
+    }
+
+    #craterFive {
+        width: 29%;
+        right: 0;
+        top: 15%;
+        z-index: 205;
+
+        .back {
+            position: absolute;
+        }
+
+        .front {
+            position: relative;
+            z-index: 206;
+        }
+
+        .turkey {
+            position: absolute;
+            width: 41%;
+            right: 7%;
+            top: 30%;
+            z-index: 204;
+            margin: auto;
+        }
+
+        .alien {
+            position: absolute;
+            width: 42%;
+            right: 7%;
+            margin: auto;
+            top: 3%;
+        }
+    }
+}
+
+@keyframes fadeOut{
+    from {
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}

@@ -1,0 +1,6 @@
+﻿[
+  {
+    "outputFile": "client/dist/styles/scene.css",
+    "inputFile": "client/src/styles/_scene.scss"
+  }
+]
