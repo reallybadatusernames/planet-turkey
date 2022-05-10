@@ -1,3 +1,3 @@
 # Planet Turkey
 
-It's like Whack-a-mole...but in space and the moles are turkeys.
+It's like Whack-a-Mole...but in space and the moles are turkeys.
